@@ -1,0 +1,24 @@
+Madera=input("Tipo de madera: ")
+Precio=float(input("Precio por metro cuadrado: $"))
+Ancho_cm=float(input("Ancho de la madera (cm): "))
+Ancho_m=Ancho_cm/100
+Bultos=int(input("Cantidad de bultos despachados: "))
+
+total_m2=0
+total_tablas=0
+
+for i in range(1, Bultos + 1):
+  print("\nRegistro del bulto", i)
+  alto_m=float(input("Alto del bulto (metros, ej. 1.2 o 0.9): "))
+  cantidad_tablas=int(input("Cantidad de tablas del bulto: "))
+  area=Ancho_m*alto_m*cantidad_tablas
+  total_m2+=area
+  total_tablas+=cantidad_tablas
+
+  print("Metros cuadrados del bulto:", round(area, 2), "m2")
+
+valor_total=total_m2*Precio
+print("\n--- Resumen del despacho ---")
+print("total metros cuadrados:", round(total_m2, 2), "m2")
+print("total tablas:", total_tablas)
+print("valor total: $", round(valor_total, 2))
