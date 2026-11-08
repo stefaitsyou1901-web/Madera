@@ -1,0 +1,128 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMjDBCCz3HpXUfZgEQ22mhR",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/stefaitsyou1901-web/Madera/blob/main/madera\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "q5DBIOglLN5Q"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Una empresa de pisos de madera maciza despacha a sus obras material, debemos saber; tipo de madera, precio por metro cuadrado, ancho de la madera, cantidad bultos despachados, después por cada bulto preguntar alto del bulto y cantidad de tablas en cada bulto. - Stephani Cuervo"
+      ],
+      "metadata": {
+        "id": "55504RfaNg5Z"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "w-AwEGkqrtCp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "Madera=input(\"Tipo de madera: \")\n",
+        "Precio=float(input(\"Precio por metro cuadrado: $\"))\n",
+        "Ancho_cm=float(input(\"Ancho de la madera (cm): \"))\n",
+        "Ancho_m=Ancho_cm/100\n",
+        "Bultos=int(input(\"Cantidad de bultos despachados: \"))\n",
+        "\n",
+        "total_m2=0\n",
+        "total_tablas=0\n",
+        "\n",
+        "for i in range(1, Bultos + 1):\n",
+        "  print(\"\\nRegistro del bulto\", i)\n",
+        "  alto_m=float(input(\"Alto del bulto (metros, ej. 1.2 o 0.9): \"))\n",
+        "  cantidad_tablas=int(input(\"Cantidad de tablas del bulto: \"))\n",
+        "  area=Ancho_m*alto_m*cantidad_tablas\n",
+        "  total_m2+=area\n",
+        "  total_tablas+=cantidad_tablas\n",
+        "\n",
+        "  print(\"Metros cuadrados del bulto:\", round(area, 2), \"m2\")\n",
+        "\n",
+        "valor_total=total_m2*Precio\n",
+        "print(\"\\n--- Resumen del despacho ---\")\n",
+        "print(\"total metros cuadrados:\", round(total_m2, 2), \"m2\")\n",
+        "print(\"total tablas:\", total_tablas)\n",
+        "print(\"valor total: $\", round(valor_total, 2))\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "cellView": "code",
+        "id": "SMKDRwpLU-Tx",
+        "outputId": "98ec412c-74cc-4b7c-c8b4-bda3f4e8e2d5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Tipo de madera: cumaru\n",
+            "Precio por metro cuadrado: $180000\n",
+            "Ancho de la madera (cm): 14\n",
+            "Cantidad de bultos despachados: 3\n",
+            "\n",
+            "Registro del bulto 1\n",
+            "Alto del bulto (metros, ej. 1.2 o 0.9): 2.0\n",
+            "Cantidad de tablas del bulto: 10\n",
+            "Metros cuadrados del bulto: 2.8 m2\n",
+            "\n",
+            "Registro del bulto 2\n",
+            "Alto del bulto (metros, ej. 1.2 o 0.9): 1.50\n",
+            "Cantidad de tablas del bulto: 10\n",
+            "Metros cuadrados del bulto: 2.1 m2\n",
+            "\n",
+            "Registro del bulto 3\n",
+            "Alto del bulto (metros, ej. 1.2 o 0.9): 1.10\n",
+            "Cantidad de tablas del bulto: 10\n",
+            "Metros cuadrados del bulto: 1.54 m2\n",
+            "\n",
+            "--- Resumen del despacho ---\n",
+            "total metros cuadrados: 6.44 m2\n",
+            "total tablas: 30\n",
+            "valor total: $ 1159200.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
